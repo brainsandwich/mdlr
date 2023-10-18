@@ -1,0 +1,12 @@
+include(CPM)
+
+set(GLFW_BUILD_DOCS "OFF")
+set(GLFW_BUILD_EXAMPLES "OFF")
+set(GLFW_BUILD_TESTS "OFF")
+set(GLFW_INSTALL "OFF")
+set(GLFW_USE_OSMESA "OFF")
+set(GLFW_VULKAN_STATIC "OFF")
+CPMAddPackage("https://github.com/glfw/glfw.git@3.3.8#3.3.8")
+if (glfw_ADDED)
+    add_library(glfw::glfw ALIAS glfw)
+endif()
